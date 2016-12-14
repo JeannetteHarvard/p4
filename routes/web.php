@@ -11,6 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', ['as'=>'HomePage', function () {
+    return view('index');
+}]);
+
+
+Route::resource('partner', 'PartnerController');
