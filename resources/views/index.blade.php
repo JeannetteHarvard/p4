@@ -15,7 +15,7 @@
 <div class="container">
   <div class="row">
       <div class="col-xs-4">
-        <h3><a href="/partner">Partners</a></h3>
+        <h3><a href="/partners">Partners</a></h3>
         <blockquote>View all the partners and the respective information on the partner company and the alliance relationship such as agreements and their type, revenue, partner tier, etc.</blockquote>
       </div>
       <div class="col-xs-4">
@@ -30,7 +30,7 @@
 
   <div class="row">
       <div class="col-xs-4">
-        <blockquote class="linkquote"><a href="/partner">Explore <em>Partners</em> >>></a></blockquote>
+        <blockquote class="linkquote"><a href="/partners">Explore <em>Partners</em> >>></a></blockquote>
       </div>
       <div class="col-xs-4">
         <blockquote class="linkquote"><a href="/random-user">Explore <em>Initiatives</em> >>></a></blockquote>

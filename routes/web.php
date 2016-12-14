@@ -16,7 +16,7 @@ Route::get('/', ['as'=>'HomePage', function () {
 }]);
 
 
-Route::resource('partner', 'PartnerController');
+Route::resource('partners', 'PartnerController');
 
 
 
@@ -56,3 +56,15 @@ Route::get('/debug', function() {
     echo '</pre>';
 
 });
+
+if(App::environment('local')) {
+
+    Route::get('/dropdb', function() {
+
+        DB::statement('DROP database alliancesdb');
+        DB::statement('CREATE database alliancesdb');
+
+        return 'Dropped alliancesdb; created alliancesdb.';
+    });
+
+};

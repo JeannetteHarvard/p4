@@ -32,11 +32,15 @@
       <div class="container">
           @if(Route::current()->getName() != 'HomePage')
             <a href="{{ route('HomePage') }}">Home</a>
+
+
+            @if(is(Route::current()->getName(), 'partners.*'))
+              / <a href="{{ route('partners.index') }}">Partners</a>
+            @endif
+
             <br><br>
           @endif
       </div>
-
-
 
       <div class="container">
 

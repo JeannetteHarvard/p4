@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Partner;
 
 class PartnerController extends Controller
 {
@@ -14,7 +15,10 @@ class PartnerController extends Controller
     public function index()
     {
         //
-        return view('partner.index');
+        // $partners = Partner::orderBy('name', 'asc');
+        $partners = Partner::orderBy('name', 'asc')->get();
+        // dump($partners);
+        return view('partner.index')->with('partners', $partners);
     }
 
     /**
@@ -25,7 +29,7 @@ class PartnerController extends Controller
     public function create()
     {
         //
-        return 'Create new Partner';
+        return view('partner.create');
     }
 
     /**
@@ -48,8 +52,8 @@ class PartnerController extends Controller
      */
     public function show($id)
     {
-        //
-        return 'Show a Partner by id';
+        $partner = Partner::find($id);
+        return view('partner.show')->with('partner', $partner);
     }
 
     /**
