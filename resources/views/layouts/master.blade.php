@@ -50,7 +50,7 @@
 
       <div class="container">
           <footer>
-              &copy; {{ date('Y') }} by Jeannette D.
+              &copy; {{ date('Y') }} by Jeannette DuVal
           </footer>
       </div>
           <!-- Latest compiled and minified JavaScript -->
