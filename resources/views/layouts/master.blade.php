@@ -26,6 +26,7 @@
 
 
       <header class=bgimage>
+          <a href="/" id="bckgr-img-link">Home Page</a>
       </header>
 
       @if(Session::get('flash_message') != null))

@@ -19,6 +19,12 @@
   height: 100px;
 }
 
+#bckgr-img-link {
+    display:block;
+    height:100%;
+    width:100%;
+    text-indent:-9999px;
+}
 
 footer {
   color: lightgrey;
