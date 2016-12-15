@@ -13,7 +13,7 @@ The objective of this project is to conduct a POC (Proof of Concept) for such a 
 
 ## Screencast Demo
 Quick demonstration of the project and implementation:
-TBD<http://screencast-o-matic.com/watch/cDXerIjs5c>
+<http://screencast-o-matic.com/watch/cDlorJQ0LM>
 
 ## Details for Teaching Team
 Alliances Management System POC core functionality:
