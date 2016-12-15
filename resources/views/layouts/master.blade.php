@@ -26,7 +26,7 @@
 
 
       <header class=bgimage>
-          <a href="/" id="bckgr-img-link">Home Page</a>
+          <a href="/" id="bckgr-img-link" title="Strategic Alliances Management System">Home Page</a>
       </header>
 
       @if(Session::get('flash_message') != null))
