@@ -28,6 +28,13 @@
       <header class=bgimage>
       </header>
 
+      @if(Session::get('flash_message') != null))
+          <div class='flash_message'>{{ Session::get('flash_message') }}</div>
+      @endif
+      @if(Session::get('flash_message_red') != null))
+          <div class='flash_message_red'>{{ Session::get('flash_message_red') }}</div>
+      @endif
+
 
       <div class="container">
           @if(Route::current()->getName() != 'HomePage')

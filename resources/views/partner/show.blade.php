@@ -11,12 +11,18 @@
 
   @if( ! empty($partner) )
 
-<h1><b>{{ $partner->name }}</b></h1>
+<!-- <h1><b>{{ $partner->name }}</b></h1> -->
+<img src="/images/logos/{{ $partner->logo_url }}" alt="{{ $partner->name }}" width="200">
 
   <div class="container">
         <div class="col-xs-6">
-
+          <br>
           <p><a target=_blank href='{{ $partner->url }}'>{{ $partner->url }}</a></p>
+
+          <div class="row">
+              <div class="col-lg-3"><b>Company Name:</b></div>
+              <div class="col-lg-9">{{ $partner->name }}</div>
+          </div>
           <div class="row">
               <div class="col-lg-3"><b>Year founded:</b></div>
               <div class="col-lg-9">{{ $partner->founded_year }}</div>
@@ -63,9 +69,22 @@
         </div>
 </div>
 
+<br>
 
 
-
+<div class="col-xs-12">
+  <div class="col-lg-6">
+        <a href="{{ route('partners.edit', $partner->id) }}"><b>Edit Partner</b></a>
+  </div>
+  <div class="col-lg-6"  align='right'>
+        <form method='POST' action='/partners/{{ $partner->id }}'>
+            {{ csrf_field() }}
+            {{ method_field('DELETE') }}
+            <input type='hidden' name='id' value='{{ $partner->id }}'>
+            <input type='submit' value='Delete Partner' class="btn btn-danger">
+        </form>
+  </div>
+</div>
   @else
       <h1>no such partner</h1>
   @endif
