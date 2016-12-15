@@ -7,16 +7,20 @@
 ## Description
 Corporate Strategic Alliances today is surprisingly one of the few enterprise process areas which are not supported by any specialized IT systems. The job of any alliances executive requires daily interactions with multiple stakeholders inside and outside of his or her group and his or her company, on a global scale.
 
-Keeping in mind all the contacts, names, titles and responsibilities, actions discussed and steps in driving joint initiatives is close to impossible. In this respect the job of alliances is close to the job of sales people, but in our opinion involves even more contacts, types of activities and diversified areas of engagements. Nevertheless, the needs of salespeople have been satisfied since long with the CRMs such as Siebel, Salesforce and others, while there are no such systems for the specific requirements of Alliances Management.
+Keeping in mind all the contacts, names, titles and responsibilities, actions discussed and steps in driving joint initiatives is close to impossible. In this respect the job of alliances leaders is similar to the job of sales people, and in our opinion involves not less but probably even more contacts, types of activities and diversified areas of engagements. Nevertheless, the needs of salespeople have been satisfied since long with the CRMs such as Siebel, Salesforce and others, while there are no such systems for the specific requirements of the Alliances Management.
 
-The objective of this project is to conduct a POC (Proof of Concept) for such a system which would address the needs of the corporate alliances teams. As corporate alliances and engagements are really specific to any particular business and industry, we only target our system for technology industry, in particular for the partnership type between Software and Service providers (i.e. Oracle and Accenture, SAP and IBM, AWS and Capgemini).
+The objective of this project is to conduct a POC (Proof of Concept) for such a system which would address the needs of the strategic corporate alliances teams. As corporate alliances and engagements are really specific to any particular business and industry, we only target our system for technology industry, in particular for the partnership type between Software and Service providers (i.e. Oracle and Accenture, SAP and IBM, AWS and Capgemini).
 
 ## Screencast Demo
 Quick demonstration of the project and implementation:
 TBD<http://screencast-o-matic.com/watch/cDXerIjs5c>
 
 ## Details for Teaching Team
-Alliances Management system POC core functionality:
+Alliances Management System POC core functionality:
+- Authentication
+  - Welcome Page: We decided to display on the welcome page all the three major features of the system even for unauthenticated users. The authentication is asked when any of those internal areas are accessed.
+  - Login / Register functionality fully implemented.
+  - All the features of the website (except for the home page) are only available for logged in users
 - Partners
   - View all Partners owned by the logged in User
   - View Partner specific information by clicking on Partner logo
