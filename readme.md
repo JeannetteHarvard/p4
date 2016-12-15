@@ -40,6 +40,22 @@ Alliances Management System POC core functionality:
 
 The project uses standard Laravel Framework coding procedures with the implementation one Laravel package and one PHP package.
 
+## P4 Specific Details for Teaching Team
+4 CRUD operations in action:
+- Partners
+  - Create: <http://p4.jeannette.nyc/partners/create>
+  - Read: <http://p4.jeannette.nyc/partners/3>
+  - Update: <http://p4.jeannette.nyc/partners/3/edit>
+  - Delete (right bottom corner): <http://p4.jeannette.nyc/partners/3>
+- Technology Areas
+  - Create: <http://p4.jeannette.nyc/technologies/create>
+  - Read: <http://p4.jeannette.nyc/technologies/1>
+  - Update: <http://p4.jeannette.nyc/technologies/1/edit>
+  - Delete (right bottom corner): <http://p4.jeannette.nyc/technologies/1>
+Planning Doc:
+<https://docs.google.com/document/d/1CF72jjYzqp9U7UCMy1EIvtWWGLM_taYMG1bSKjZSuiA/edit?usp=sharing>
+
+
 ## Outside Code & Sources
 - Laravel Framework version 5.3.26
 <http://laravel.com/>
