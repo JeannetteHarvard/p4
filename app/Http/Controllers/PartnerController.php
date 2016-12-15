@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Partner;
+use App\Technology;
 use Session;
 
 class PartnerController extends Controller
@@ -15,8 +16,7 @@ class PartnerController extends Controller
      */
     public function index()
     {
-        //
-        // $partners = Partner::orderBy('name', 'asc');
+
         $partners = Partner::orderBy('name', 'asc')->get();
         // dump($partners);
         return view('partner.index')->with('partners', $partners);
@@ -29,8 +29,10 @@ class PartnerController extends Controller
      */
     public function create()
     {
-        //
-        return view('partner.create');
+        # Get all the possible technoogies so we can include them with checkboxes in the view
+        $technologies_for_checkbox = Technology::getTechnologiesForCheckboxes();
+
+        return view('partner.create')->with('technologies_for_checkbox', $technologies_for_checkbox);
     }
 
     /**
@@ -80,6 +82,11 @@ class PartnerController extends Controller
 
         $partner->save();
 
+        // adding new tagged technologies
+        $technologies = ($request->technologies) ?: [];
+        # Sync partners
+        $partner->technologies()->sync($technologies);
+
         Session::flash('flash_message','New Partner was added');
         // return redirect('/partners');
         return \Redirect::route('partners.show', array($partner->id));
@@ -118,8 +125,20 @@ class PartnerController extends Controller
             return redirect('/partners');
         }
 
-        return view('partner.edit')->with('partner', $partner);
-        // return 'Edit a Partner by id';
+        # Get all the possible technoogies so we can include them with checkboxes in the view
+        $technologies_for_checkbox = Technology::getTechnologiesForCheckboxes();
+
+        # Technologise for the current partner
+        $technologies_for_this_partner = [];
+        foreach($partner->technologies as $technology) {
+            $technologies_for_this_partner[] = $technology->name;
+        }
+
+        return view('partner.edit')->with([
+          'partner' => $partner,
+          'technologies_for_checkbox' => $technologies_for_checkbox,
+          'technologies_for_this_partner' => $technologies_for_this_partner
+          ]);
     }
 
     /**
@@ -169,6 +188,11 @@ class PartnerController extends Controller
       $partner->partner_tier = $request->partner_tier;
 
       $partner->save();
+
+      // adding new tagged technologies
+      $technologies = ($request->technologies) ?: [];
+      # Sync technologies
+      $partner->technologies()->sync($technologies);
 
       Session::flash('flash_message','Partner changes were saved');
       // return redirect('/partners');

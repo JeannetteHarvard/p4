@@ -2,7 +2,7 @@
 
 
 @section('title')
-    Show Partner
+    Partner: {{ $partner->name }}
 @stop
 
 
@@ -65,6 +65,21 @@
                   <div class="col-lg-3"><b>Partner Tier:</b></div>
                   <div class="col-lg-9">{{ $partner->partner_tier }}</div>
               </div>
+
+              <div class="row">
+                  <div class="col-lg-3"><b>Technologies:</b></div>
+                  <div class="col-lg-9">
+
+                        @foreach ($partner->technologies as $key=>$technology)
+                                  <a href="{{ route('technologies.show', $technology->id) }}">{{ $technology->name }}</a>
+                                  <?php if(($key+1) != $partner->technologies->count()) echo '|'; ?>
+                        @endforeach
+
+                  </div>
+              </div>
+
+
+
 
         </div>
 </div>

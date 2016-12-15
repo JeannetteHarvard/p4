@@ -94,12 +94,26 @@
                 <div class="col-lg-4"><label for="partner_tier">Partner Tier</label></div>
                 <div class="col-lg-8"><input type='text' name='partner_tier' value="{{ old('partner_tier', $partner->partner_tier) }}" id="partner_tier"></div>
             </div>
+            <div class="row">
+                <div class="col-lg-4"><label for="partner_tier">Technology Areas:</label></div>
+                <div class="col-lg-8">
+                      @foreach($technologies_for_checkbox as $technology_id => $technology_name)
+                          <input
+                              type='checkbox'
+                              value='{{ $technology_id }}'
+                              name='technologies[]'
+                              {{ (in_array($technology_name, $technologies_for_this_partner)) ? 'CHECKED' : '' }}
+                          >
+                          {{ $technology_name }} <br>
+                      @endforeach
+                </div>
+            </div>
 
 
       </div>
 
     <div class="col-xs-12" align='right'>
-      <input type='submit' value='Submit Changes'>
+      <input type='submit' value='Save Changes'>
     </div>
 
   </form>

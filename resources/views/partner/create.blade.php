@@ -94,6 +94,20 @@
                 <div class="col-lg-8"><input type='text' name='partner_tier' value="{{ old('partner_tier', 'The highest :)') }}" id="partner_tier"></div>
             </div>
 
+            <div class="row">
+                <div class="col-lg-4"><label for="partner_tier">Technology Areas:</label></div>
+                <div class="col-lg-8">
+                      @foreach($technologies_for_checkbox as $technology_id => $technology_name)
+                          <input
+                              type='checkbox'
+                              value='{{ $technology_id }}'
+                              name='technologies[]'
+                          >
+                          {{ $technology_name }} <br>
+                      @endforeach
+                </div>
+            </div>
+
 
       </div>
 

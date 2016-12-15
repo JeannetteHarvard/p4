@@ -18,7 +18,7 @@ Route::get('/', ['as'=>'HomePage', function () {
 
 
 Route::resource('partners', 'PartnerController');
-
+Route::resource('technologies', 'TechnologyController');
 
 
 // FOR TESTING PURPOSES
