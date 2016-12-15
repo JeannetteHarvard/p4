@@ -27,7 +27,7 @@
         <blockquote>Review the list of all technology areas which our partners are addressing with their respective solutions and value propositions.  </blockquote>
       </div>
       <div class="col-xs-4">
-        <h3><a href="/Contact">Internal Teams</a></h3>
+        <h3><a href="/contacts">Internal Teams</a></h3>
         <blockquote>Collaborate with our internal teams on partner engagements, add and edit contacts, view by SBU, geography, initiative, etc.</blockquote>
       </div>
   </div>
@@ -40,7 +40,7 @@
         <blockquote class="linkquote"><a href="/technologies">Explore <em>Technology Areas</em> >>></a></blockquote>
       </div>
       <div class="col-xs-4">
-        <blockquote class="linkquote"><a href="/random-user">Explore <em>Internal Teams</em> >>></a></blockquote>
+        <blockquote class="linkquote"><a href="/contacts">Explore <em>Internal Teams</em> >>></a></blockquote>
       </div>
   </div>
 

@@ -46,6 +46,9 @@
             @if(strpos(Route::current()->getName(),'technologies') === 0)
               / <a href="{{ route('technologies.index') }}">Technologies</a>
             @endif
+            @if(strpos(Route::current()->getName(),'contacts') === 0)
+              / <a href="{{ route('contacts.index') }}">Contacts</a>
+            @endif
 
             <br><br>
           @endif
@@ -59,9 +62,15 @@
       </div>
 
 
-      <br><br>
+      <br>
 
       <div class="container">
+          @if(Route::current()->getName() != 'HomePage')
+                <script>
+                  document.write('<a href="' + document.referrer + '"><< Back</a>');
+                </script>
+          @endif
+          <br><br>
           <footer>
               &copy; {{ date('Y') }} by Jeannette DuVal
           </footer>

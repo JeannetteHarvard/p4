@@ -11,6 +11,10 @@ class PracticeController extends Controller
   {
     $faker = Faker::create();
 
+    $sbus = array('FS', 'Cloud Infra', 'BSv', 'Apps One', 'Apps Two', 'Sogeti');
+
+    echo $sbus[array_rand($sbus)];
+    echo '<br>';
     // generate data by accessing properties
     echo $faker->name;
     return null;

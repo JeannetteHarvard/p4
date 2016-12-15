@@ -86,5 +86,44 @@ class PartnersTableSeeder extends Seeder
                       'partner_agreements' => 'Global Strategic Partner Agreement, Local Agreements in China and Brazil',
                       'partner_tier' => 'to be clarified'
                   ]);
+
+                  DB::table('partners')->insert([
+                         'created_at' => Carbon\Carbon::now()->toDateTimeString(),
+                         'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
+                         'name' => 'Lenovo',
+                         'url' => 'http://www.lenovo.com/',
+                         'logo_url' => 'lenovo.jpg',
+                         'description' => 'Founded in 1969, Software AG is an enterprise software company with over 10,000 enterprise customers in over 70 countries. The company is the second largest software vendor in Germany, the seventh largest in Europe[2] and among the top 25 globally[citation needed]. Software AG is traded on the Frankfurt Stock Exchange under the symbol “SOW” and part of the technology index TecDAX.',
+                         'founded_year' => 1969,
+                         'headquarters_city' => 'Darmstadt',
+                         'headquarters_country' => 'Germany',
+                         'annual_revenue' => '€857.8 million (2014)',
+                         'number_of_employees' => 4421,
+
+                         'partner_portal_url' => 'https://empower.softwareag.com',
+                         'training_portal_url' => 'http://knowledge.softwareag.com/',
+                         'partner_agreements' => 'Global Strategic Partner Agreement, Local Agreements in China and Brazil',
+                         'partner_tier' => 'to be clarified'
+                     ]);
+
+                     DB::table('partners')->insert([
+                            'created_at' => Carbon\Carbon::now()->toDateTimeString(),
+                            'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
+                            'name' => 'Sitecore',
+                            'url' => 'http://www.sitecore.com/',
+                            'logo_url' => 'sitecore.png',
+                            'description' => 'Founded in 1969, Software AG is an enterprise software company with over 10,000 enterprise customers in over 70 countries. The company is the second largest software vendor in Germany, the seventh largest in Europe[2] and among the top 25 globally[citation needed]. Software AG is traded on the Frankfurt Stock Exchange under the symbol “SOW” and part of the technology index TecDAX.',
+                            'founded_year' => 1969,
+                            'headquarters_city' => 'Darmstadt',
+                            'headquarters_country' => 'Germany',
+                            'annual_revenue' => '€857.8 million (2014)',
+                            'number_of_employees' => 4421,
+
+                            'partner_portal_url' => 'https://empower.softwareag.com',
+                            'training_portal_url' => 'http://knowledge.softwareag.com/',
+                            'partner_agreements' => 'Global Strategic Partner Agreement, Local Agreements in China and Brazil',
+                            'partner_tier' => 'to be clarified'
+                        ]);
+
     }
 }
