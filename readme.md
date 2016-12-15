@@ -41,7 +41,7 @@ Alliances Management System POC core functionality:
 The project uses standard Laravel Framework coding procedures with the implementation one Laravel package and one PHP package.
 
 ## P4 Specific Details for Teaching Team
-4 CRUD operations in action:
+4 CRUD operations in action (all with server side validation):
 - Partners
   - Create: <http://p4.jeannette.nyc/partners/create>
   - Read: <http://p4.jeannette.nyc/partners/3>
