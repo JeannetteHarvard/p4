@@ -55,6 +55,14 @@ The project uses standard Laravel Framework coding procedures with the implement
 Planning Doc:
 <https://docs.google.com/document/d/1CF72jjYzqp9U7UCMy1EIvtWWGLM_taYMG1bSKjZSuiA/edit?usp=sharing>
 
+## Test Data
+The project populates test data through the following Seeders:
+- Users: the target audience of the application is Alliances Managers and Leaders
+- Partners: Strategic technology partners with whom the relationship has to be managed
+- Technology Areas: Used to classify and easily identify and locate Partner
+- Contacts: Internal Stakeholders involved in the strategic partner initiatives. Test user data generated via Faker package
+- Partners and Technology Areas: Allocation of each partner to a certain technology area
+- Partners and Users: Alliances managers are only allowed to view partners owned by them through this relationship
 
 ## Outside Code & Sources
 - Laravel Framework version 5.3.26
