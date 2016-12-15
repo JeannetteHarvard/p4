@@ -178,6 +178,8 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        /* Added by Jeannette on 12/15/2016 */
+        Barryvdh\Debugbar\ServiceProvider::class,
     ],
 
     /*
@@ -226,6 +228,8 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+        /* Added by Jeanette on 12/16/2016 */
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
     ],
 
 ];

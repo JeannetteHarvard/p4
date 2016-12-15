@@ -1,5 +1,6 @@
 <?php
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -59,12 +60,14 @@ Route::get('/debug', function() {
 
 if(App::environment('local')) {
 
+
     Route::get('/dropdb', function() {
 
         DB::statement('DROP database alliancesdb');
         DB::statement('CREATE database alliancesdb');
-
         return 'Dropped alliancesdb; created alliancesdb.';
     });
 
 };
+
+Route::get('/practice', 'PracticeController@index')->name('practice.index');
