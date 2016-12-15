@@ -14,10 +14,22 @@ class PartnerController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
 
-        $partners = Partner::orderBy('name', 'asc')->get();
+          $user = $request->user();
+
+          # Note: We're getting the user from the request, but you can also get it like this:
+          //$user = Auth::user();
+
+        // $partners = Partner::orderBy('name', 'asc')->get();
+
+        if($user) {
+            $partners = $user->partners()->get();
+          }
+        else {
+          $partners = [];
+        }
         // dump($partners);
         return view('partner.index')->with('partners', $partners);
     }
@@ -80,12 +92,19 @@ class PartnerController extends Controller
         $partner->partner_agreements = $request->partner_agreements;
         $partner->partner_tier = $request->partner_tier;
 
+
         $partner->save();
 
         // adding new tagged technologies
         $technologies = ($request->technologies) ?: [];
         # Sync partners
         $partner->technologies()->sync($technologies);
+
+        // adding current user
+        // $partner->user_id = 4; # <--- NEW LINE
+        // $partner->user_id = $request->user()->id; # <--- NEW LINE
+        $users = array($request->user()->id);
+        $partner->users()->sync($users);
 
         Session::flash('flash_message','New Partner was added');
         // return redirect('/partners');
@@ -221,4 +240,9 @@ class PartnerController extends Controller
       Session::flash('flash_message','Partner '.$name.' deleted');
       return redirect('/partners');
     }
+
+    public function __construct()
+       {
+           $this->middleware('auth');
+      }
 }

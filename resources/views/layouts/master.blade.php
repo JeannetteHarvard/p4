@@ -37,6 +37,8 @@
 
 
       <div class="container">
+        <div  class="col-xs-12">
+        <div class="col-lg-6"> <!-- left menu div -->
           @if(Route::current()->getName() != 'HomePage')
             <a href="{{ route('HomePage') }}">Home</a>
 
@@ -52,6 +54,20 @@
 
             <br><br>
           @endif
+        </div>
+        <div class="col-lg-6"  align='right'> <!-- right menu div -->
+
+                  @if(Auth::check())
+                      Logged in User: <b><?php echo ucwords(Auth::user()->name); ?></b> &nbsp;&nbsp;&nbsp;&nbsp;
+                      <a href='/partners'>My Partners</a> /
+                      <a href='/logout'>Log out</a>
+                  @else
+                      <a href='/login'>Log in</a> /
+                      <a href='/register'>Register</a>
+                  @endif
+
+        </div>
+      </div>
       </div>
 
       <div class="container">

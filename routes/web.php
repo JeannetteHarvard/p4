@@ -16,11 +16,14 @@ Route::get('/', ['as'=>'HomePage', function () {
     return view('index');
 }]);
 
+// Route::get('/home', 'HomeController@index');
+Route::get('/home',  function () {
+    return view('index');
+});
 
 Route::resource('partners', 'PartnerController');
 Route::resource('technologies', 'TechnologyController');
 Route::resource('contacts', 'ContactController');
-
 
 // FOR TESTING PURPOSES
 
@@ -57,7 +60,7 @@ Route::get('/debug', function() {
 
     echo '</pre>';
 
-});
+})->middleware('auth');
 
 if(App::environment('local')) {
 
@@ -67,8 +70,26 @@ if(App::environment('local')) {
         DB::statement('DROP database alliancesdb');
         DB::statement('CREATE database alliancesdb');
         return 'Dropped alliancesdb; created alliancesdb.';
-    });
+    })->middleware('auth');
 
 };
 
-Route::get('/practice', 'PracticeController@index')->name('practice.index');
+Route::get('/practice', 'PracticeController@index')->name('practice.index')->middleware('auth');
+
+Auth::routes();
+Route::get('/logout','Auth\LoginController@logout')->name('logout');
+
+
+
+Route::get('/show-login-status', function() {
+
+    # You may access the authenticated user via the Auth facade
+    $user = Auth::user();
+
+    if($user)
+        dump($user->toArray());
+    else
+        dump('You are not logged in.');
+
+    return;
+});

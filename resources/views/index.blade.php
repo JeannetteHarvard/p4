@@ -10,7 +10,11 @@
 
 @section('content')
 
-<h1>Welcome to Alliances Management System!</h1>
+@if( ! empty(Auth::user()->name))
+  <h1><?php echo ucwords(Auth::user()->name); ?>, welcome to Alliances Management System!</h1>
+@else
+  <h1>Welcome to Alliances Management System!</h1>
+@endif
 
 <div class="container">
   <div class="row">

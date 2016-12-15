@@ -93,36 +93,36 @@ class PartnersTableSeeder extends Seeder
                          'name' => 'Lenovo',
                          'url' => 'http://www.lenovo.com/',
                          'logo_url' => 'lenovo.jpg',
-                         'description' => 'Founded in 1969, Software AG is an enterprise software company with over 10,000 enterprise customers in over 70 countries. The company is the second largest software vendor in Germany, the seventh largest in Europe[2] and among the top 25 globally[citation needed]. Software AG is traded on the Frankfurt Stock Exchange under the symbol “SOW” and part of the technology index TecDAX.',
-                         'founded_year' => 1969,
-                         'headquarters_city' => 'Darmstadt',
-                         'headquarters_country' => 'Germany',
-                         'annual_revenue' => '€857.8 million (2014)',
-                         'number_of_employees' => 4421,
+                         'description' => 'Lenovo Group Ltd. is a Chinese multinational technology company with headquarters in Beijing, China, and Morrisville, United States. It designs, develops, manufactures and sells personal computers, tablet computers, smartphones, workstations, servers, electronic storage devices, IT management software, and smart televisions. In 2015, Lenovo was the world\'s largest personal computer vendor by unit sales.',
+                         'founded_year' => 1984,
+                         'headquarters_city' => 'Beijing and Morrisville',
+                         'headquarters_country' => 'China and United States',
+                         'annual_revenue' => 'US$ 44.91 billion (2016)',
+                         'number_of_employees' => 60000,
 
-                         'partner_portal_url' => 'https://empower.softwareag.com',
-                         'training_portal_url' => 'http://knowledge.softwareag.com/',
-                         'partner_agreements' => 'Global Strategic Partner Agreement, Local Agreements in China and Brazil',
-                         'partner_tier' => 'to be clarified'
+                         'partner_portal_url' => 'http://www.lenovopartner.com/',
+                         'training_portal_url' => 'http://ap.lenovopartner.com/',
+                         'partner_agreements' => 'Global Srategic Agreement, NDA, local in Europe and USA',
+                         'partner_tier' => 'Platinum in all countries'
                      ]);
 
                      DB::table('partners')->insert([
                             'created_at' => Carbon\Carbon::now()->toDateTimeString(),
                             'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
                             'name' => 'Sitecore',
-                            'url' => 'http://www.sitecore.com/',
+                            'url' => 'http://www.sitecore.net/',
                             'logo_url' => 'sitecore.png',
-                            'description' => 'Founded in 1969, Software AG is an enterprise software company with over 10,000 enterprise customers in over 70 countries. The company is the second largest software vendor in Germany, the seventh largest in Europe[2] and among the top 25 globally[citation needed]. Software AG is traded on the Frankfurt Stock Exchange under the symbol “SOW” and part of the technology index TecDAX.',
-                            'founded_year' => 1969,
-                            'headquarters_city' => 'Darmstadt',
-                            'headquarters_country' => 'Germany',
-                            'annual_revenue' => '€857.8 million (2014)',
-                            'number_of_employees' => 4421,
+                            'description' => 'Sitecore is a customer experience management company that provides web content management and multichannel marketing automation software. In 1998 in University of Copenhagen alumni Thomas Albert, Jakob Christensen, Peter Christensen, Ole Sas Thrane, and current Sitecore CEO Michael Seifert cofounded Pentia A/S, a systems integration company that focused on implementing websites built on Microsoft technologies. In 2001, Sitecore was spun off as a separate business entity that initially sold content management systems in the Danish market to IT departments.',
+                            'founded_year' => 2001,
+                            'headquarters_city' => 'Copenhagen',
+                            'headquarters_country' => 'Denmark',
+                            'annual_revenue' => 'n/a',
+                            'number_of_employees' => 1000,
 
-                            'partner_portal_url' => 'https://empower.softwareag.com',
-                            'training_portal_url' => 'http://knowledge.softwareag.com/',
+                            'partner_portal_url' => 'http://spn.sitecore.net/default.aspx',
+                            'training_portal_url' => 'https://dev.sitecore.net/',
                             'partner_agreements' => 'Global Strategic Partner Agreement, Local Agreements in China and Brazil',
-                            'partner_tier' => 'to be clarified'
+                            'partner_tier' => 'Local Tier in each geography based on skills and projects'
                         ]);
 
     }

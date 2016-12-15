@@ -194,4 +194,9 @@ class TechnologyController extends Controller
       return redirect('/technologies');
 
     }
+
+    public function __construct()
+       {
+           $this->middleware('auth');
+      }        
 }
