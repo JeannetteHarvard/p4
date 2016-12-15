@@ -52,6 +52,7 @@ The project uses standard Laravel Framework coding procedures with the implement
   - Read: <http://p4.jeannette.nyc/technologies/1>
   - Update: <http://p4.jeannette.nyc/technologies/1/edit>
   - Delete (right bottom corner): <http://p4.jeannette.nyc/technologies/1>
+
 Planning Doc:
 <https://docs.google.com/document/d/1CF72jjYzqp9U7UCMy1EIvtWWGLM_taYMG1bSKjZSuiA/edit?usp=sharing>
 
