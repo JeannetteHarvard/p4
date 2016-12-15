@@ -56,7 +56,7 @@
             <br><br>
           @endif
         </div>
-        <div class="col-lg-6"  align='right'> <!-- right menu div -->
+        <div class="col-lg-6 menu-right"> <!-- right menu div -->
 
                   @if(Auth::check())
                       Logged in User: <b><?php echo ucwords(Auth::user()->name); ?></b> &nbsp;&nbsp;&nbsp;&nbsp;

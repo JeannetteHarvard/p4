@@ -26,6 +26,10 @@
     text-indent:-9999px;
 }
 
+.menu-right{
+  text-align: right;
+}
+
 footer {
   color: lightgrey;
 }
