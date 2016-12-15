@@ -20,7 +20,11 @@ class PartnerUserTableSeeder extends Seeder
           'Jeannette' => ['Blue Prism', 'CA Technologies', 'Cisco', 'Lenovo', 'Sitecore', 'Software AG'],
           'jill' => ['Blue Prism', 'Cisco', 'Sitecore', 'Software AG'],
           'jamal' => ['CA Technologies', 'Blue Prism', 'Lenovo'],
-          'susan' => ['Blue Prism', 'CA Technologies', 'Cisco', 'Lenovo', 'Sitecore', 'Software AG']
+          'susan' => ['Blue Prism', 'CA Technologies', 'Cisco', 'Lenovo', 'Sitecore', 'Software AG'],
+          'Joe Coniglio' => ['Blue Prism', 'CA Technologies', 'Cisco', 'Lenovo', 'Sitecore', 'Software AG'],
+          'Lance Cassidy' => ['Blue Prism', 'CA Technologies', 'Cisco', 'Lenovo', 'Sitecore', 'Software AG'],
+          'Manish Grover' => ['Blue Prism', 'CA Technologies', 'Cisco', 'Lenovo', 'Sitecore', 'Software AG'],
+          'Murat Aksu' => ['Blue Prism', 'CA Technologies', 'Cisco', 'Lenovo', 'Sitecore', 'Software AG']
       ];
 
       # Now loop through the above array, creating a new pivot for each partner to tag with technology

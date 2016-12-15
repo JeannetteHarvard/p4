@@ -1,27 +1,51 @@
-# Laravel PHP Framework
+# Project 4 for DWA15
+## Final Laravel Project: Alliances Management System
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+## Live URL
+<http://p4.jeannette.nyc/>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+## Description
+Corporate Strategic Alliances today is surprisingly one of the few enterprise process areas which are not supported by any specialized IT systems. The job of any alliances executive requires daily interactions with multiple stakeholders inside and outside of his or her group and his or her company, on a global scale.
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+Keeping in mind all the contacts, names, titles and responsibilities, actions discussed and steps in driving joint initiatives is close to impossible. In this respect the job of alliances is close to the job of sales people, but in our opinion involves even more contacts, types of activities and diversified areas of engagements. Nevertheless, the needs of salespeople have been satisfied since long with the CRMs such as Siebel, Salesforce and others, while there are no such systems for the specific requirements of Alliances Management.
 
-## Official Documentation
+The objective of this project is to conduct a POC (Proof of Concept) for such a system which would address the needs of the corporate alliances teams. As corporate alliances and engagements are really specific to any particular business and industry, we only target our system for technology industry, in particular for the partnership type between Software and Service providers (i.e. Oracle and Accenture, SAP and IBM, AWS and Capgemini).
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+## Screencast Demo
+Quick demonstration of the project and implementation:
+TBD<http://screencast-o-matic.com/watch/cDXerIjs5c>
 
-## Contributing
+## Details for Teaching Team
+Alliances Management system POC core functionality:
+- Partners
+  - View all Partners owned by the logged in User
+  - View Partner specific information by clicking on Partner logo
+    - Follow up on the assigned Technology Areas to view other Partners in this space
+    - Edit | Delete Partner
+  - Add a New Partner (tagging the available Technology Areas)
+- Technology Areas
+  - View all Technology Areas and the managed Partners in each space
+  - View Technology specific information by clicking on it
+    - Follow up on the assigned Partners to see their information and other technology areas
+    - Edit | Delete Technology Area (and all its assignments to the related partners)
+  - Add a New Technology Area (bottom of the screen), attach to any of the managed partners
+- Internal Teams
+  - List of the major stakeholders driving the strategic partner relationships
+    - Displays Strategic Business Unit (SBU), Photo, Name, Role, and Contact information
+    - In the next version this section will provide sorting and filtering capabilities by SBUs, Initiatives and Partners as well as CRUD functionality.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+The project uses standard Laravel Framework coding procedures with the implementation one Laravel package and one PHP package.
 
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+## Outside Code & Sources
+- Laravel Framework version 5.3.26
+<http://laravel.com/>
+- Laravel Debugbar package 'barryvdh/laravel-debugbar'
+<https://github.com/barryvdh/laravel-debugbar>
+- Random User package 'fzaninotto/Faker'
+<https://github.com/fzaninotto/Faker>
+- Bootstrap CSS:
+<https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css>
+<https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css>
+<https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js>
+- The background image is borrowed from the following page:
+<http://www.cci-us.com/strategic-alliances/>

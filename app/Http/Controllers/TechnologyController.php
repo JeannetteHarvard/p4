@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Technology;
 use App\Partner;
+use App\User;
 use Session;
 
 class TechnologyController extends Controller
@@ -14,10 +15,27 @@ class TechnologyController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
 
+      $user = $request->user();
+
       $technologies = Technology::orderBy('name', 'asc')->get();
+      // let's load only technologies assigned to our partners
+
+      // if($user) {
+      //     $partners = $user->partners()->get();
+      //     foreach($partners as $partner){
+      //         foreach($partner->technologies as $technology){
+      //           echo $technology->name;
+      //         }
+      //     }
+      //
+      //
+      //   }
+      // else {
+      //   $partners = [];
+      // }
 
       return view('technology.index')->with('technologies', $technologies);
     }
@@ -198,5 +216,5 @@ class TechnologyController extends Controller
     public function __construct()
        {
            $this->middleware('auth');
-      }        
+      }
 }

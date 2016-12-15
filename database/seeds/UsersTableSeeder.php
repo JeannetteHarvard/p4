@@ -17,7 +17,11 @@ class UsersTableSeeder extends Seeder
           ['duval@g.harvard.edu','Jeannette','helloworld'], # <-- Required for P4
           ['jill@harvard.edu','jill','helloworld'], # <-- Required for P4
           ['jamal@harvard.edu','jamal','helloworld'], # <-- Required for P4
-          ['susanbuck@fas.harvard.edu','susan','helloworld'] # <-- Update with your own info, or remove
+          ['susanbuck@fas.harvard.edu','susan','helloworld'], # <-- Update with your own info, or remove
+          ['joseph.coniglio@capgemini.com','Joe Coniglio','capgemini'],
+          ['lance.cassidy@capgemini.com','Lance Cassidy','capgemini'],
+          ['manish.grover@capgemini.com','Manish Grover','capgemini'],
+          ['murat.aksu@capgemini.com','Murat Aksu','capgemini']
       ];
 
       # Get existing users to prevent duplicates
