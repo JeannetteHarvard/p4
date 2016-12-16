@@ -17,7 +17,7 @@ class PracticeController extends Controller
     echo '<br>';
     // generate data by accessing properties
     echo $faker->name;
-    echo '<br>+1-416-710-1505'
+    echo '<br>+1-416-710-1505';
     return null;
   }
 }
