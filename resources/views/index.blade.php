@@ -19,7 +19,7 @@
 <div class="container">
   <div class="row">
       <div class="col-xs-4">
-        <h3><a href="/partners">Partners</a></h3>
+        <h3><a href="/partners">My Partners</a></h3>
         <blockquote>View all the partners and the respective information on the partner company and the alliance relationship such as agreements and their type, revenue, partner tier, etc.</blockquote>
       </div>
       <!-- <div class="col-xs-4">
